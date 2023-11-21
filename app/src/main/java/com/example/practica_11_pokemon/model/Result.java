@@ -19,4 +19,13 @@ public class Result {
     public void seturl(String value) {
         this.url = value;
     }
+
+    public String getNumber() {
+        String[] urlParts = url.split("/");
+        return urlParts[urlParts.length - 1];
+    }
+
+    public String getImageUrl() {
+        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + getNumber() + ".png";
+    }
 }
