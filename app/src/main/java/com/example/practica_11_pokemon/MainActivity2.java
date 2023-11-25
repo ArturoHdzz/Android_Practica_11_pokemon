@@ -48,7 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onResponse(Call<Pokemon> call, Response<Pokemon> response) {
                 if (response.isSuccessful()) {
                     List<Result> pokemonList = response.body().getResults();
-                    pokemonAdapter = new PokemonAdapter(pokemonList);
+                    pokemonAdapter = new PokemonAdapter(pokemonList, MainActivity2.this);
                     recyclerView.setAdapter(pokemonAdapter);
                 }
             }
