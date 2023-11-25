@@ -53,7 +53,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
 
                 // Pass data to MainActivity3
                 intent.putExtra("imageUrl", pokemon.getImageUrl());
-                intent.putExtra("description", "This is a sample description.");
+                intent.putExtra("description", pokemon.getName());
 
                 // Start MainActivity3
                 context.startActivity(intent);
