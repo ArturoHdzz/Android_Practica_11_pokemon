@@ -3,6 +3,7 @@ package com.example.practica_11_pokemon.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.practica_11_pokemon.R;
 import com.example.practica_11_pokemon.model.Pokemon;
 import com.example.practica_11_pokemon.model.Result;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -33,6 +35,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Result pokemon = listaPokemon.get(position);
+        Picasso.get().load(pokemon.getImageUrl()).into(holder.imgPokemon);
         holder.bind(pokemon);
     }
 
@@ -45,11 +48,13 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
 
         private TextView txtPokemon;
         private TextView txtDesc;
+        private ImageView imgPokemon;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtPokemon = itemView.findViewById(R.id.txtPokemon);
             txtDesc = itemView.findViewById(R.id.txtDesc);
+            imgPokemon = itemView.findViewById(R.id.imgPokemon);
         }
 
         public void bind(Result pokemon) {

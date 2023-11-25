@@ -4,6 +4,15 @@
     android:layout_height="140dp"
     android:background="#5FF6F6">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgPokemon"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,7 +21,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/black"
         android:text="Pokemon"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="140dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,17 +31,7 @@
         android:textColor="@color/black"
         android:text="Url"
         android:layout_below="@+id/txtPokemon"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="10dp" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/imgPokemon"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_centerVertical="true" />
 
 </RelativeLayout>
